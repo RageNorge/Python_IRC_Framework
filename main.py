@@ -4,8 +4,6 @@ config_file_name = "config.py"
 
 # Use IPv4 and TCP/IP
 irc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-# Take the config file name and remove extension then import it
-config_file = __import__(os.path.splitext(config_file_name)[0]) 
 
 # Checks to see if a file exists
 def file_exists(file_name):
@@ -74,6 +72,8 @@ def ping():
     send2irc("PONG", text.split()[1] + "\r")
 
 if file_exists(config_file_name):
+    # Take the config file name and remove extension then import it
+    config_file = __import__(os.path.splitext(config_file_name)[0]) 
     print("Config file \"" + config_file_name + "\" exists.")
     connect()
 

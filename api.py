@@ -8,4 +8,8 @@ def send_message(message):
 def send_action(action):
     main.send2irc("PRIVMSG", "\x01ACTION " + action + "\x01")
 
+def get_text():
+    main.get_text()
 
+def get_sender_name():
+    return main.get_text()[1:].rsplit('!', 1)[0]

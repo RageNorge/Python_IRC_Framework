@@ -56,6 +56,8 @@ if file_exists(config_file_name):
 
     while True:
         text = get_text().strip()
+        # Remove unicode characters that don't print properly
+        text = text.replace("\x02", "").replace("\x1F", "")
         if text != "":
             print(text)
 

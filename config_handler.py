@@ -2,6 +2,7 @@
 def create_config():
     # Config steps allow for easy additions later
     config_steps = "5"
+    config_file_name = "config.py"
     config_file = open(config_file_name, 'w')
 
     bot_name = input("[1/" + config_steps + "] Name of your bot: ")

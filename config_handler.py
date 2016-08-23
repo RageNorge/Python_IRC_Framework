@@ -1,5 +1,5 @@
 # Prompts user to set options, write them to file
-def create_config():
+def create_config(config_file_name):
     # Config steps allow for easy additions later
     config_steps = "5"
     config_file = open(config_file_name, 'w')

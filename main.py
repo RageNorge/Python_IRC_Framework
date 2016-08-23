@@ -78,4 +78,4 @@ else:
 
     # Input is lowered and sliced so anything starting with 'y' or 'Y' will work
     if input("Create a new config file? y/n: ").lower()[0:1]  == "y":
-        config_handler.create_config()
+        config_handler.create_config(config_file_name)

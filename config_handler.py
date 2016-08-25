@@ -17,10 +17,7 @@ def create_config(config_file_name):
     config_file.write("nickserv_password=\"" + nickserv_password +"\"\n")
     config_file.write("server=\"" + irc_server + "\"\n")
     config_file.write("channel=\"#" + irc_channel + "\"\n")
-
-    # Join message is optional, so here it is only written to config if it is not blank
-    if join_message.strip() is not "":
-        config_file.write("join_message=\"" + join_message + "\"\n")
+    config_file.write("join_message=\"" + join_message + "\"\n")
 
     config_file.close()
     print("Config file " + config_file_name + " was created.")
